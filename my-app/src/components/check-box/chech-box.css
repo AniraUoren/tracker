@@ -1,0 +1,62 @@
+.checkBox {
+    margin: 0;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border: 2px solid lightgray;
+    border-radius: 3px;
+    position: relative;
+}
+
+.checkBox_start:after {
+    content: "";
+    width: 45px;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    top: 14px;
+    left: -8px;
+    transform: rotate(-45deg);
+}
+
+.checkBox_run:after {
+    content: "";
+    border-top: 34px solid lightgray;
+    border-right: 34px solid transparent;
+    border-radius: 3px;
+    position: absolute;
+    top: -1px;
+    left: -2px;
+}
+
+.checkBox_pending {
+    background: url("../../assets/arrow.png") center no-repeat transparent;
+    background-size: 30px 30px;
+    transform: rotate(180deg);
+}
+
+.checkBox_cancel:after {
+    content: "";
+    width: 45px;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    top: 14px;
+    left: -8px;
+    transform: rotate(-45deg);
+}
+
+.checkBox_cancel:before {
+    content: "";
+    width: 45px;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    top: 14px;
+    left: -8px;
+    transform: rotate(45deg);
+}
+
+.checkBox_done {
+    background: lightgray;
+}
