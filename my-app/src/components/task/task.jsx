@@ -7,7 +7,7 @@ function Task({text}) {
     const [taskText, setTaskText] = useState(text);
     const [isEditFieldVisible, setIsEditFieldVisible] = useState(false);
 
-    function editTack(taskText) {
+    function editTack() {
         setIsEditFieldVisible(true);
     }
 
