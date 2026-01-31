@@ -1,8 +1,99 @@
+.taskContainer{
+    position: relative;
+}
+
 .task {
+    display: block;
     padding: 0 10px;
     margin: 0;
     width: 300px;
     height: 30px;
     border-bottom: 2px solid lightgray;
     box-sizing: border-box;
+}
+
+.task_enable {
+    display: none;
+}
+
+.editButton{
+    padding: 0;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+    background: url("../../assets/edit.svg") no-repeat center;
+    background-size: 25px 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    outline: none;
+    fill: #646cff;
+}
+
+.editButton:hover {
+    outline: 1px solid lightgray;
+}
+
+.editButton:focus {
+    border: none;
+    outline: none;
+}
+
+.editButton_disable {
+    display: none;
+}
+
+.confirmButton{
+    display: none;
+    padding: 0;
+    margin: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 0;
+    background: url("../../assets/confirm.svg") no-repeat center;
+    background-size: 25px 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    outline: none;
+    fill: #646cff;
+}
+
+.confirmButton:hover {
+    outline: 1px solid lightgray;
+}
+
+.confirmButton:focus {
+    border: none;
+    outline: none;
+}
+
+.confirmButton_enable {
+    display: block;
+}
+
+.editTaskField {
+    display: none;
+    padding: 0 10px;
+    padding-bottom: 5px;
+    margin: 0;
+    width: 300px;
+    height: 30px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid lightcoral;
+    font: inherit;
+    font-style: italic;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.editTaskField_enable {
+    display: block;
 }
