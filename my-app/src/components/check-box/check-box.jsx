@@ -1,34 +1,34 @@
 import "./chech-box.css"
 import {useState} from "react";
 
-function CheckBox({status = ""}) {
-    const [statusTask, setStatusTask] = useState(status);
+function CheckBox({status, changeStatus}) {
+    // const [statusTask, setStatusTask] = useState(status);
      function handleClick() {
-        switch (statusTask) {
+        switch (status) {
             case "":
-                setStatusTask("start");
+                // setTasklist("start");
+                changeStatus("start");
                 break;
             case "start":
-                setStatusTask("run");
+                changeStatus("run");
                 break;
             case "run":
-                setStatusTask("done");
+                changeStatus("done");
                 break;
             case "done":
-                setStatusTask("pending");
+                changeStatus("pending");
                 break;
             case "pending":
-                setStatusTask("cancel");
+                changeStatus("cancel");
                 break;
             case "cancel":
-                setStatusTask("");
+                changeStatus("");
                 break;
         }
     }
 
     return (
-        <div className={statusTask !== "" ? `checkBox checkBox_${statusTask}` : "checkBox"} onClick={handleClick}>
-
+        <div className={`checkBox checkBox_${status}`} onClick={handleClick}>
         </div>
 
     );
