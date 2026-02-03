@@ -3,8 +3,7 @@ import "./task.css";
 import {useState} from "react";
 import "../../assets/edit.svg";
 
-function Task({text}) {
-    const [taskText, setTaskText] = useState(text);
+function Task({text, changeText}) {
     const [isEditFieldVisible, setIsEditFieldVisible] = useState(false);
 
     function editTack() {
@@ -24,10 +23,10 @@ function Task({text}) {
     return (
         <div className={"taskContainer"}>
             <div className="taskContainer">
-                <p className={isEditFieldVisible !== true ? "task" : "task task_enable"}>{taskText}</p>
+                <p className={isEditFieldVisible !== true ? "task" : "task task_enable"}>{text}</p>
                 <input type="text"
-                       value={taskText}
-                       onChange={evt => setTaskText(evt.target.value)}
+                       value={text}
+                       onChange={evt => changeText(evt.target.value)}
                        onKeyDown={handleKeyPress}
                        className={isEditFieldVisible !== true ? "editTaskField" : "editTaskField editTaskField_enable"}/>
             </div>

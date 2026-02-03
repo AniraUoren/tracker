@@ -1,8 +1,6 @@
 import "./chech-box.css"
-import {useState} from "react";
 
 function CheckBox({status, changeStatus}) {
-    // const [statusTask, setStatusTask] = useState(status);
      function handleClick() {
         switch (status) {
             case "":

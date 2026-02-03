@@ -8,9 +8,15 @@ function TaskContainer({task, setTasklist}) {
         console.log(task);
         setTasklist(prevState => prevState.map(task => task.id === task.id ? task : task));
     }
+
+    function handleChangeText(newText) {
+        task.text = newText;
+        setTasklist(prevState => prevState.map(task => task.id === task.id ? task : task));
+    }
+
     return(
         <div className="container">
-            <Task text={task.text}/>
+            <Task text={task.text} changeText={handleChangeText}/>
             <CheckBox status={task.weekday === 1 ? task.status : ""} changeStatus={handelChangeStatus}/>
             <CheckBox status={task.weekday === 2 ? task.status : ""} changeStatus={handelChangeStatus}/>
             <CheckBox status={task.weekday === 3 ? task.status : ""} changeStatus={handelChangeStatus}/>
