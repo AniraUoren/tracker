@@ -17,7 +17,6 @@ function App() {
         {id: 6, text: "test_none", weekday: 6, status: Statuses.None},
         {id: 7, text: "test_none", weekday: 7, status: Statuses.None}
     ]);
-    const [isTaskListEmpty, setIsTaskListEmpty] = useState(false);
 
     function createTask(text) {
         setTasklist(prevState => [...prevState, {text: text, weekday: Weekdays.Monday, status: Statuses.None}]);
