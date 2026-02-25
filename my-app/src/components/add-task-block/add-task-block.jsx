@@ -1,10 +1,14 @@
 import "./add-task-block.css";
+import {useDispatch} from "react-redux";
+import {addTask} from "../../slices/tasksSlice.js";
 
-function AddTaskBlock({createTask}) {
+function AddTaskBlock() {
+    const dispatch = useDispatch();
+
     const handleAddingTask = (e) => {
         if (e.key === 'Enter') {
             e.preventDefault();
-            createTask(e.target.value);
+            dispatch(addTask(e.target.value));
             e.target.value = ""
         }
     };
