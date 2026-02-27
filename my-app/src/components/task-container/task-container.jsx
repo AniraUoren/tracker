@@ -28,6 +28,7 @@ function TaskContainer({task}) {
     }
 
     return(
+        // TODO Сделать так, чтобы по клику на день недели проставлялся день и отрабатывал стиль
         <div className="container">
             <Task text={task.text} changeText={handleChangeText}/>
             <CheckBox status={task.weekday === 1 ? task.status : ""} changeStatus={handelChangeStatus}/>
