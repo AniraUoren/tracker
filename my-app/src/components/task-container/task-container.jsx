@@ -1,20 +1,34 @@
 import "./task-container.css";
 import Task from "../task/task.jsx";
 import CheckBox from "../check-box/check-box.jsx";
+import {useDispatch} from "react-redux";
+import {editTask} from "../../slices/tasksSlice.js";
 
-function TaskContainer({task, setTasklist}) {
+function TaskContainer({task}) {
+    const dispatch = useDispatch();
+
     function handelChangeStatus (newStatus) {
-        task.status = newStatus;
-        console.log(task);
-        setTasklist(prevState => prevState.map(task => task.id === task.id ? task : task));
+        dispatch(editTask(
+            {
+                id: task.id,
+                key:"status",
+                value: newStatus
+            }
+        ))
     }
 
     function handleChangeText(newText) {
-        task.text = newText;
-        setTasklist(prevState => prevState.map(task => task.id === task.id ? task : task));
+        dispatch(editTask(
+            {
+                id: task.id,
+                key:"text",
+                value: newText
+            }
+        ))
     }
 
     return(
+        // TODO Сделать так, чтобы по клику на день недели проставлялся день и отрабатывал стиль
         <div className="container">
             <Task text={task.text} changeText={handleChangeText}/>
             <CheckBox status={task.weekday === 1 ? task.status : ""} changeStatus={handelChangeStatus}/>

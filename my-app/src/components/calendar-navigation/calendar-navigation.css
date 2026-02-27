@@ -1,0 +1,38 @@
+.calendar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.calendar_arrow-btn{
+    width: 40px;
+    height: 40px;
+    background: url("../../assets/chevron.svg") no-repeat center;
+    background-size: 25px 25px;
+    font-size: 0;
+    outline: none;
+    cursor: pointer;
+    border: 2px solid lightgray;
+    border-radius: 3px;
+}
+
+.calendar_arrow-btn:hover{
+    box-shadow: #646cff 1px 1px 7px;
+}
+
+.calendar_arrow-btn:focus{
+    outline: none;
+}
+
+.calendar_arrow-btn__week-before{
+    transform: rotate(180deg);
+}
+
+.calendar_arrow-btn__now{
+    width: auto;
+    padding: 5px 10px;
+    font-size: inherit;
+    background-image: none;
+}

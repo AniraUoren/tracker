@@ -1,0 +1,17 @@
+.logo_link{
+    text-decoration: line-through;
+    color: #ffffff;
+    font-size: 45px;
+    max-height: 50px;
+}
+
+.logo_link:hover{
+    color: #ffffff;
+    cursor: default;
+    text-shadow: #646cff 1px 1px 7px;
+}
+
+.logo_text{
+    margin: 0;
+    padding: 0;
+}

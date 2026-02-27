@@ -1,0 +1,31 @@
+.settings {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.settings_btn{
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    padding: 0;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    border: 2px solid lightgray;
+    border-radius: 3px;
+}
+
+.settings_btn:hover{
+    box-shadow: #646cff 1px 1px 7px;
+}
+
+.settings_btn:focus{
+    outline: none;
+}
+
+.settings_image{
+    width: 30px;
+    height: 30px;
+}
