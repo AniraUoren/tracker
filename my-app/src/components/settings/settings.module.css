@@ -13,8 +13,8 @@
     background-color: transparent;
     outline: none;
     cursor: pointer;
-    border: 2px solid lightgray;
-    border-radius: 3px;
+    /*border: 2px solid lightgray;*/
+    /*border-radius: 3px;*/
 }
 
 .settings_btn:hover{
