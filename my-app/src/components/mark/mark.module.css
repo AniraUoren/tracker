@@ -1,0 +1,78 @@
+.mark{
+    position: relative;
+}
+
+.mark_selector {
+    padding: 0;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #000;
+    outline: 1px solid rgba(255, 255, 255, 0.87);
+}
+
+.mark_select{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    background-color: #242424;
+}
+
+.mark_select__active{
+    display: flex;
+}
+
+.mark_options{
+    width: 100px;
+    padding: 5px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.87);
+    border-radius: 3px;
+    background-color: #242424;
+    outline: none;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.mark_options:hover{
+    font-weight: 500;
+}
+
+.mark_options__home:hover{
+    background: repeating-linear-gradient(
+            -45deg,           /* Угол наклона */
+            #87a786 0px,        /* Черный с 0 */
+            #87a786 1px,       /* по 10 пикселей */
+            transparent 2px, /* Прозрачный с 10 */
+            transparent 7px  /* по 20 пикселей */
+    );
+}
+.mark_options__work:hover {
+    background: repeating-linear-gradient(
+            -45deg,           /* Угол наклона */
+            #b2cbff 0px,        /* Черный с 0 */
+            #b2cbff 1px,       /* по 10 пикселей */
+            transparent 2px, /* Прозрачный с 10 */
+            transparent 7px  /* по 20 пикселей */
+    );
+}
+.mark_options__family:hover {
+    background: repeating-linear-gradient(
+            -45deg,           /* Угол наклона */
+            #f680bb 0px,        /* Черный с 0 */
+            #f680bb 1px,       /* по 10 пикселей */
+            transparent 2px, /* Прозрачный с 10 */
+            transparent 7px  /* по 20 пикселей */
+    );
+}
+.mark_options__hobby:hover {
+    background: repeating-linear-gradient(
+            -45deg,           /* Угол наклона */
+            #efe093 0px,        /* Черный с 0 */
+            #efe093 1px,       /* по 10 пикселей */
+            transparent 2px, /* Прозрачный с 10 */
+            transparent 7px  /* по 20 пикселей */
+    );
+}
