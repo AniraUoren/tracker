@@ -1,4 +1,4 @@
-import "./chech-box.css"
+import Styles from "./chech-box.module.css"
 
 function CheckBox({status, changeStatus}) {
      function handleClick() {
@@ -26,7 +26,7 @@ function CheckBox({status, changeStatus}) {
     }
 
     return (
-        <div className={`checkBox checkBox_${status}`} onClick={handleClick}>
+        <div className={`${Styles.checkBox} ${Styles[`checkBox_${status}`]}`} onClick={handleClick}>
         </div>
 
     );

@@ -1,4 +1,4 @@
-import "./task-container.css";
+import Styles from "./task-container.module.css";
 import Task from "../task/task.jsx";
 import CheckBox from "../check-box/check-box.jsx";
 import {useDispatch} from "react-redux";
@@ -29,7 +29,7 @@ function TaskContainer({task}) {
 
     return(
         // TODO Сделать так, чтобы по клику на день недели проставлялся день и отрабатывал стиль
-        <div className="container">
+        <div className={Styles.container}>
             <Task text={task.text} changeText={handleChangeText}/>
             <CheckBox status={task.weekday === 1 ? task.status : ""} changeStatus={handelChangeStatus}/>
             <CheckBox status={task.weekday === 2 ? task.status : ""} changeStatus={handelChangeStatus}/>

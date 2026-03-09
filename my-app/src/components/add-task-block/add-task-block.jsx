@@ -1,4 +1,4 @@
-import "./add-task-block.css";
+import Styles from "./add-task-block.module.css";
 import {useDispatch} from "react-redux";
 import {addTask} from "../../slices/tasksSlice.js";
 import Mark from "../mark/mark.jsx";
@@ -22,9 +22,9 @@ function AddTaskBlock() {
         }
     };
     return (
-        <form action="#" className="addTask" onSubmit={event => event.preventDefault()}>
+        <form action="#" className={Styles.addTask} onSubmit={event => event.preventDefault()}>
             <Mark typeSelect={handleSelectTaskType}/>
-            <input type="text" placeholder="Введите текст задачи" className="addTask_input" id="textTask"
+            <input type="text" placeholder="Введите текст задачи" className={Styles.addTask_input} id="textTask"
                    onKeyPress={handleAddingTask}></input>
         </form>
 
