@@ -12,6 +12,7 @@
     background: url("../../assets/chevron.svg") no-repeat center;
     background-size: 25px 25px;
     font-size: 0;
+    color: rgba(255, 255, 255, 0.87);
     outline: none;
     cursor: pointer;
     border: 2px solid lightgray;
