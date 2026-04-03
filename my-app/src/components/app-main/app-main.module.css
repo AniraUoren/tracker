@@ -8,12 +8,15 @@
 }
 
 .block {
+    padding: 20px;
     grid-column-start: 2;
     grid-column-end: 3;
     display: flex;
     flex-direction: column;
     justify-content: start;
     gap: 5px;
+    background-color: rgba(117, 115, 117, 0.56);
+    border-radius: 10px;
 }
 
 .tasksHead {
@@ -30,6 +33,10 @@
     width: 30px;
     height: 30px;
     text-align: center;
+}
+
+.dayName:first-of-type {
+    grid-column: 2;
 }
 
 .addFirstTask {

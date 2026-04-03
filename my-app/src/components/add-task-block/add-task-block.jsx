@@ -6,7 +6,7 @@ import Mark from "../mark/mark.jsx";
 function AddTaskBlock() {
     const dispatch = useDispatch();
 
-    const newTask = {}
+    const newTask = {statuses:{}}
 
     const handleSelectTaskType = (type) => {
       newTask.type = type;
@@ -19,6 +19,7 @@ function AddTaskBlock() {
             newTask.text = e.target.value;
             dispatch(addTask(newTask));
             e.target.value = ""
+            console.log(newTask)
         }
     };
     return (

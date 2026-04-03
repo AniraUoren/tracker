@@ -1,26 +1,25 @@
 import Styles from "./chech-box.module.css"
 
-function CheckBox({status, changeStatus}) {
+function CheckBox({status, day, changeStatus}) {
      function handleClick() {
         switch (status) {
             case "":
-                // setTasklist("start");
-                changeStatus("start");
+                changeStatus("start", day);
                 break;
             case "start":
-                changeStatus("run");
+                changeStatus("run", day);
                 break;
             case "run":
-                changeStatus("done");
+                changeStatus("done", day);
                 break;
             case "done":
-                changeStatus("pending");
+                changeStatus("pending", day);
                 break;
             case "pending":
-                changeStatus("cancel");
+                changeStatus("cancel", day);
                 break;
             case "cancel":
-                changeStatus("");
+                changeStatus("", day);
                 break;
         }
     }

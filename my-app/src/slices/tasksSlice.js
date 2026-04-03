@@ -1,18 +1,29 @@
-import { createSlice }  from "@reduxjs/toolkit";
+import {createSlice} from "@reduxjs/toolkit";
 
-const Weekdays = { Monday: 1, Tuesday: 2, Wednesday: 3, Thursday: 4, Friday: 5, Saturday: 6, Sunday: 7 };
+const Weekdays = {Monday: 1, Tuesday: 2, Wednesday: 3, Thursday: 4, Friday: 5, Saturday: 6, Sunday: 7};
 const Statuses = {Start: "start", Run: "run", Done: "done", Pending: "pending", Cancel: "cancel", None: ""};
-const TypesOfTasks = {Home: "home", Work: "work", Family: "family", Hobby: "hobby" };
+const TypesOfTasks = {Home: "home", Work: "work", Family: "family", Hobby: "hobby"};
 
 const initialState = {
+    /**
+     * Структура задачи ожидается следующая:
+     * @param id {number} - ид задачи
+     * @param type {string} - тип задачи из TypesOfTasks
+     * @param text {string} - текст задачи
+     * @param statuses {array} - массив статусов по дням недели
+     * @param statuses[i].weekday {number} - день недели
+     * @param statuses[i].status {string} - статус в этот день
+     */
     tasks: [
-        {id: 1, type: TypesOfTasks.Home, text: "test_start", weekday: 1, status: Statuses.Start},
-        {id: 2, type: TypesOfTasks.Home, text: "test_run", weekday: 2, status: Statuses.Run},
-        {id: 3, type: TypesOfTasks.Home, text: "test_done", weekday: 3, status: Statuses.Done},
-        {id: 4, type: TypesOfTasks.Home, text: "test_pending", weekday: 4, status: Statuses.Pending},
-        {id: 5, type: TypesOfTasks.Home, text: "test_cancel", weekday: 5, status: Statuses.Cancel},
-        {id: 6, type: TypesOfTasks.Home, text: "test_none", weekday: 6, status: Statuses.None},
-        {id: 7, type: TypesOfTasks.Home, text: "test_none", weekday: 7, status: Statuses.None}
+        {
+            id: 1,
+            type: TypesOfTasks.Hobby,
+            text: "3000 xx",
+            statuses: {
+                [Weekdays.Saturday]: Statuses.Pending,
+                [Weekdays.Sunday]: Statuses.Start
+            }
+        },
     ],
 }
 
@@ -26,8 +37,7 @@ export const tasksSlice = createSlice({
                     id: state.tasks.length + 1,
                     type: action.payload.type,
                     text: action.payload.text,
-                    weekday: undefined,
-                    status: Statuses.None,
+                    statuses: {}
                 }
             )
         },

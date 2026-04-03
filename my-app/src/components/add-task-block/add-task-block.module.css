@@ -1,5 +1,5 @@
 .addTask {
-    padding: 0;
+    padding: 20px;
     margin: 0;
     margin-bottom: 15px;
     width: 250px;
@@ -10,7 +10,8 @@
     align-items: center;
     grid-column-start: 1;
     grid-column-end: 2;
-    border-bottom: 2px solid lightgray;
+    border-radius: 10px;
+    background-color: rgba(117, 115, 117, 0.56);
 }
 
 .addTask_input {
@@ -24,6 +25,7 @@
     box-sizing: border-box;
     font: inherit;
     color: rgba(255, 255, 255, 0.87);
+    border-bottom: 2px solid lightgray;
 }
 
 .addTask_input::placeholder {
