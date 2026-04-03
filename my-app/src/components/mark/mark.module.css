@@ -40,39 +40,15 @@
     font-weight: 500;
 }
 
-.mark_options__home:hover{
-    background: repeating-linear-gradient(
-            -45deg,           /* Угол наклона */
-            #87a786 0px,        /* Черный с 0 */
-            #87a786 1px,       /* по 10 пикселей */
-            transparent 2px, /* Прозрачный с 10 */
-            transparent 7px  /* по 20 пикселей */
-    );
+.mark_options__home{
+    background: rgba(41, 182, 40, 0.34);
 }
-.mark_options__work:hover {
-    background: repeating-linear-gradient(
-            -45deg,           /* Угол наклона */
-            #b2cbff 0px,        /* Черный с 0 */
-            #b2cbff 1px,       /* по 10 пикселей */
-            transparent 2px, /* Прозрачный с 10 */
-            transparent 7px  /* по 20 пикселей */
-    );
+.mark_options__work {
+    background: rgba(178, 203, 255, 0.34);
 }
-.mark_options__family:hover {
-    background: repeating-linear-gradient(
-            -45deg,           /* Угол наклона */
-            #f680bb 0px,        /* Черный с 0 */
-            #f680bb 1px,       /* по 10 пикселей */
-            transparent 2px, /* Прозрачный с 10 */
-            transparent 7px  /* по 20 пикселей */
-    );
+.mark_options__family {
+    background: rgba(246, 128, 187, 0.34);
 }
-.mark_options__hobby:hover {
-    background: repeating-linear-gradient(
-            -45deg,           /* Угол наклона */
-            #efe093 0px,        /* Черный с 0 */
-            #efe093 1px,       /* по 10 пикселей */
-            transparent 2px, /* Прозрачный с 10 */
-            transparent 7px  /* по 20 пикселей */
-    );
+.mark_options__hobby {
+    background: rgba(239, 224, 147, 0.34);
 }

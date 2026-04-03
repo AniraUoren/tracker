@@ -24,6 +24,14 @@ const initialState = {
                 [Weekdays.Sunday]: Statuses.Start
             }
         },
+        {
+            id: 2,
+            type: TypesOfTasks.Work,
+            text: "Wow",
+            statuses: {
+                [Weekdays.Saturday]: Statuses.Run
+            }
+        },
     ],
 }
 

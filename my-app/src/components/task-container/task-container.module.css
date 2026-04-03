@@ -1,7 +1,25 @@
 .container {
     margin: 0;
-    padding: 0;
+    padding: 3px;
+    padding-right: 13px;
     display: grid;
     grid-template-columns:300px repeat(7, 30px);
     column-gap: 10px;
+    border-radius: 5px;
+}
+
+.container__home{
+    background-color: rgba(135, 167, 134, 0.34);
+}
+
+.container__work{
+    background-color: rgba(178, 203, 255, 0.34);
+}
+
+.container__family{
+    background-color: rgba(246, 128, 187, 0.34);
+}
+
+.container__hobby{
+    background-color: rgba(239, 224, 147, 0.34);
 }
