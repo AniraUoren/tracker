@@ -1,6 +1,11 @@
 .mark{
     position: relative;
+    z-index: 99;
+
+.mark__hidden {
+    display: none;
 }
+
 
 .mark_selector {
     padding: 0;
@@ -41,7 +46,7 @@
 }
 
 .mark_options__home{
-    background: rgba(41, 182, 40, 0.34);
+    background: rgba(135, 167, 134, 0.34);
 }
 .mark_options__work {
     background: rgba(178, 203, 255, 0.34);
@@ -51,4 +56,5 @@
 }
 .mark_options__hobby {
     background: rgba(239, 224, 147, 0.34);
+}
 }

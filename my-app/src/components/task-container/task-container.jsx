@@ -30,17 +30,27 @@ function TaskContainer({task}) {
         ))
     }
 
+    function handleChangeType (newType) {
+        dispatch(editTask(
+            {
+                id: task.id,
+                key:"type",
+                value: newType
+            }
+        ))
+    }
+
     return(
         // TODO Сделать так, чтобы по клику на день недели проставлялся день и отрабатывал стиль
         <div className={`${Styles.container} ${Styles[`container__${task.type}`]}`}>
-            <Task text={task.text} changeText={handleChangeText}/>
-            <CheckBox status={task.statuses[1] ? task.statuses[1] : ""} day={1} changeStatus={handelChangeStatus}/>
-            <CheckBox status={task.statuses[2] ? task.statuses[2] : ""} day={2} changeStatus={handelChangeStatus}/>
-            <CheckBox status={task.statuses[3] ? task.statuses[3] : ""} day={3} changeStatus={handelChangeStatus}/>
-            <CheckBox status={task.statuses[4] ? task.statuses[4] : ""} day={4} changeStatus={handelChangeStatus}/>
-            <CheckBox status={task.statuses[5] ? task.statuses[5] : ""} day={5} changeStatus={handelChangeStatus}/>
-            <CheckBox status={task.statuses[6] ? task.statuses[6] : ""} day={6} changeStatus={handelChangeStatus}/>
-            <CheckBox status={task.statuses[7] ? task.statuses[7] : ""} day={7} changeStatus={handelChangeStatus}/>
+            <Task text={task.text} changeText={handleChangeText} changeType={handleChangeType}/>
+            <CheckBox status={task.statuses[1] ? task.statuses[1] : ""} day={1} changeStatus={handelChangeStatus} changeType={handleChangeType}/>
+            <CheckBox status={task.statuses[2] ? task.statuses[2] : ""} day={2} changeStatus={handelChangeStatus} changeType={handleChangeType}/>
+            <CheckBox status={task.statuses[3] ? task.statuses[3] : ""} day={3} changeStatus={handelChangeStatus} changeType={handleChangeType}/>
+            <CheckBox status={task.statuses[4] ? task.statuses[4] : ""} day={4} changeStatus={handelChangeStatus} changeType={handleChangeType}/>
+            <CheckBox status={task.statuses[5] ? task.statuses[5] : ""} day={5} changeStatus={handelChangeStatus} changeType={handleChangeType}/>
+            <CheckBox status={task.statuses[6] ? task.statuses[6] : ""} day={6} changeStatus={handelChangeStatus} changeType={handleChangeType}/>
+            <CheckBox status={task.statuses[7] ? task.statuses[7] : ""} day={7} changeStatus={handelChangeStatus} changeType={handleChangeType}/>
         </div>
     )
 }
