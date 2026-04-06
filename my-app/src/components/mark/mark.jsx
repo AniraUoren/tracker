@@ -1,8 +1,9 @@
 import Styles from "./mark.module.css";
 import {useState} from "react";
 
-function Mark({ typeSelect}) {
+function Mark({ typeSelect }) {
     const [isActive, setIsActive] = useState(false);
+    const [currentType, setCurrenType] = useState("");
 
     const handleOnClickToggle = () => {
         setIsActive(!isActive);
@@ -10,12 +11,13 @@ function Mark({ typeSelect}) {
 
     const handleSelectType = (type) => {
       typeSelect(type);
+      setCurrenType(type);
       setIsActive(false);
     }
 
     return (
         <div className={Styles.mark}>
-            <div className={Styles.mark_selector} onClick={handleOnClickToggle}></div>
+            <div className={`${Styles.mark_selector} ${Styles[`mark_selector__${currentType}`]}`} onClick={handleOnClickToggle}></div>
             <div className={`${Styles.mark_select} ${isActive ? Styles.mark_select__active : ''}`} id="mark-menu">
                 <button className={Styles.mark_options + ' ' + Styles['mark_options__home']} onClick={()=> handleSelectType("home")}>Дом</button>
                 <button className={Styles.mark_options + ' ' + Styles['mark_options__work']} onClick={()=> handleSelectType("work")}>Работа</button>

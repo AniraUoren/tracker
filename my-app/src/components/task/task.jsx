@@ -4,7 +4,7 @@ import {useState} from "react";
 import "../../assets/edit.svg";
 import Mark from "../mark/mark.jsx";
 
-function Task({text, changeText, changeType}) {
+function Task({text, type,  changeText, changeType}) {
     const [isEditFieldVisible, setIsEditFieldVisible] = useState(false);
 
     function editTask() {

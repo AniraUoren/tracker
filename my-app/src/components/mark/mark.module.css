@@ -1,6 +1,7 @@
-.mark{
+.mark {
     position: relative;
     z-index: 99;
+}
 
 .mark__hidden {
     display: none;
@@ -8,16 +9,32 @@
 
 
 .mark_selector {
-    padding: 0;
+    padding:0;
     margin: 0;
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: #000;
+    background: transparent;
     outline: 1px solid rgba(255, 255, 255, 0.87);
 }
 
-.mark_select{
+.mark_selector__home {
+    background: rgba(135, 167, 134, 0.34);
+}
+
+.mark_selector__work {
+    background: rgba(178, 203, 255, 0.34);
+}
+
+.mark_selector__family {
+    background: rgba(246, 128, 187, 0.34);
+}
+
+.mark_selector__hobby {
+    background: rgba(239, 224, 147, 0.34);
+}
+
+.mark_select {
     display: none;
     flex-direction: column;
     align-items: center;
@@ -27,11 +44,11 @@
     background-color: #242424;
 }
 
-.mark_select__active{
+.mark_select__active {
     display: flex;
 }
 
-.mark_options{
+.mark_options {
     width: 100px;
     padding: 5px 15px;
     border: 1px solid rgba(255, 255, 255, 0.87);
@@ -41,20 +58,23 @@
     color: rgba(255, 255, 255, 0.87);
 }
 
-.mark_options:hover{
+.mark_options:hover {
     font-weight: 500;
 }
 
-.mark_options__home{
+.mark_options__home {
     background: rgba(135, 167, 134, 0.34);
 }
+
 .mark_options__work {
     background: rgba(178, 203, 255, 0.34);
 }
+
 .mark_options__family {
     background: rgba(246, 128, 187, 0.34);
 }
+
 .mark_options__hobby {
     background: rgba(239, 224, 147, 0.34);
 }
-}
+
