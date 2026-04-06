@@ -10,7 +10,6 @@ function AddTaskBlock() {
 
     const handleSelectTaskType = (type) => {
       newTask.type = type;
-        console.log(type)
     }
 
     const handleAddingTask = (e) => {
