@@ -3,7 +3,6 @@ import Task from "../task/task.jsx";
 import CheckBox from "../check-box/check-box.jsx";
 import {useDispatch} from "react-redux";
 import {editTask} from "../../slices/tasksSlice.js";
-import {useState} from "react";
 
 function TaskContainer({task}) {
     const dispatch = useDispatch();

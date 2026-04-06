@@ -29,7 +29,7 @@ function Task({text, type,  changeText, changeType}) {
         <div className={Styles.taskContainer}>
             <div className={Styles.taskContainer}>
                 <p className={isEditFieldVisible !== true ? `${Styles.task}` : `${Styles.task} ${Styles.task_enable}`}>{text}</p>
-                <div className={Styles.markContainer}>{isEditFieldVisible ? <Mark type={type} typeSelect={handleSelectType}/> : ""}</div>
+                <div className={Styles.markContainer}>{isEditFieldVisible ? <Mark typeSelect={handleSelectType}/> : ""}</div>
                 <input type="text"
                        value={text}
                        onChange={evt => changeText(evt.target.value)}

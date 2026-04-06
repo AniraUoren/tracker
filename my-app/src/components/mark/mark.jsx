@@ -1,14 +1,9 @@
 import Styles from "./mark.module.css";
-import {useEffect, useState} from "react";
-import {useSelector} from "react-redux";
+import {useState} from "react";
 
-function Mark({ type, typeSelect }) {
+function Mark({ typeSelect }) {
     const [isActive, setIsActive] = useState(false);
     const [currentType, setCurrenType] = useState("");
-
-    // useEffect(() => {
-    //     setCurrenType(type);
-    // })
 
     const handleOnClickToggle = () => {
         setIsActive(!isActive);
