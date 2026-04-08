@@ -12,6 +12,7 @@
     grid-column-end: 2;
     border-radius: 10px;
     background-color: rgba(117, 115, 117, 0.56);
+    position: relative;
 }
 
 .addTask_input {

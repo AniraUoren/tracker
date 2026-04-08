@@ -1,0 +1,21 @@
+.error {
+    padding: 5px;
+    margin: 0;
+    position: absolute;
+    bottom: -20px;
+    left: 30px;
+    background: rgba(190,22,26,0.61);
+    border-radius: 10px;
+}
+
+.error::before {
+    content: "";
+    height: 12px;
+    width: 14px;
+    display: block;
+    position: absolute;
+    top: -12px;
+    left: 13px;
+    background: rgba(190,22,26,0.61);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}

@@ -1,6 +1,6 @@
 import Styles from "./task.module.css";
 
-import {useMemo, useState} from "react";
+import {useState} from "react";
 import "../../assets/edit.svg";
 import Mark from "../mark/mark.jsx";
 
