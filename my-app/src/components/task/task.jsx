@@ -1,11 +1,16 @@
 import Styles from "./task.module.css";
 
-import {useState} from "react";
+import {useMemo, useState} from "react";
 import "../../assets/edit.svg";
 import Mark from "../mark/mark.jsx";
 
-function Task({text, type,  changeText, changeType}) {
+function Task({text, changeText, changeType}) {
     const [isEditFieldVisible, setIsEditFieldVisible] = useState(false);
+    const [taskText, setTaskText] = useState(text);
+
+    const handleChangeTaskText = (evt) => {
+        setTaskText(evt.target.value);
+    }
 
     function editTask() {
         setIsEditFieldVisible(true);
@@ -13,11 +18,13 @@ function Task({text, type,  changeText, changeType}) {
 
     function handleKeyPress(evt) {
         if (evt.key === 'Enter') {
+            changeText(taskText);
             setIsEditFieldVisible(false);
         }
     }
 
     function handleConfirmBtn() {
+        changeText(taskText);
         setIsEditFieldVisible(false)
     }
 
@@ -31,8 +38,8 @@ function Task({text, type,  changeText, changeType}) {
                 <p className={isEditFieldVisible !== true ? `${Styles.task}` : `${Styles.task} ${Styles.task_enable}`}>{text}</p>
                 <div className={Styles.markContainer}>{isEditFieldVisible ? <Mark typeSelect={handleSelectType}/> : ""}</div>
                 <input type="text"
-                       value={text}
-                       onChange={evt => changeText(evt.target.value)}
+                       value={taskText}
+                       onChange={handleChangeTaskText}
                        onKeyDown={handleKeyPress}
                        className={isEditFieldVisible !== true ? `${Styles.editTaskField}` : `${Styles.editTaskField} ${Styles.editTaskField_enable}`}/>
             </div>
